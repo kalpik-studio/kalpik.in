@@ -1,0 +1,54 @@
+{
+  "name": "@innbell/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "oxlint -c ../../packages/config/oxlintrc.json ./src",
+    "lint:fix": "yarn lint --fix --fix-suggestions",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@innbell/constants": "workspace:*",
+    "@innbell/router": "workspace:*",
+    "@innbell/toasts": "workspace:*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "csv-parse": "^5.5.6",
+    "lru-cache": "^11.0.0",
+    "react": "*",
+    "remix-utils": "*",
+    "tailwind-merge": "^2.4.0",
+    "ua-parser-js": "^1.0.38",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@innbell/config": "workspace:*",
+    "@types/react": "*",
+    "@types/ua-parser-js": "^0.7.39",
+    "react-dom": "*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./cache": "./src/cache.server.ts",
+    "./cn": "./src/cn.ts",
+    "./csv": "./src/csv.ts",
+    "./crypto": "./src/crypto.server.ts",
+    "./date-time": "./src/date-time.ts",
+    "./error": "./src/error.ts",
+    "./file-size": "./src/file-size.ts",
+    "./flag": "./src/flag.ts",
+    "./form-data": "./src/form-data.server.ts",
+    "./invariant": "./src/invariant.ts",
+    "./local-storage": "./src/local-storage.ts",
+    "./math": "./src/math.ts",
+    "./object": "./src/object.ts",
+    "./pagination": "./src/pagination.ts",
+    "./react": "./src/react.ts",
+    "./response": "./src/response.server.ts",
+    "./search-params": "./src/search-params.ts",
+    "./text": "./src/text.ts",
+    "./user-agent": "./src/user-agent.server.ts",
+    "./*": "./src/*"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@innbell/toasts",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "oxlint -c ../../packages/config/oxlintrc.json ./src",
+    "lint:fix": "yarn lint --fix --fix-suggestions",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@innbell/constants": "workspace:*",
+    "@innbell/router": "workspace:*",
+    "react": "*",
+    "react-router": "^7.0.0",
+    "sonner": "^1.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@innbell/config": "workspace:*",
+    "@types/react": "*",
+    "react-dom": "*"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./hooks": "./src/hooks.ts",
+    "./client": "./src/remix-toast.client.ts",
+    "./toaster": "./src/toaster.tsx",
+    ".": "./src/remix-toast.server.ts"
+  }
+}

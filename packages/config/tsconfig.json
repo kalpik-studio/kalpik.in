@@ -1,0 +1,11 @@
+{
+  "extends": "./base.tsconfig.json",
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "outDir": "build",
+    "noEmit": false,
+    "rootDir": "src"
+  }
+}

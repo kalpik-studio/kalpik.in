@@ -1,0 +1,31 @@
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^]*)\\)", "(?:'|\"|`)([^\"'`]*)(?:'|\"|`)"],
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["class:\\s*?[\"'`]([^\"'`]*).*?,"]
+  ],
+  "cSpell.words": [
+    "blurhash",
+    "INNBELL",
+    "oxlint",
+    "oxlintrc",
+    "pino",
+    "pocketbase",
+    "revalidator",
+    "specialisation",
+    "specialisations"
+  ],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    // "*.tsx": "$(capture).*,$(capture)_.*"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "json.schemas": [
+    {
+      "fileMatch": ["**/chromatic.json"],
+      "url": "https://www.chromatic.com/config-file.schema.json"
+    }
+  ]
+}
