@@ -1,0 +1,5 @@
+{
+  "extends": "@innbell/config/base.tsconfig.json",
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

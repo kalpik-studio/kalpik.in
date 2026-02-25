@@ -1,0 +1,17 @@
+{
+  "extends": "@innbell/config/base.tsconfig.json",
+  "include": [
+    "src",
+    "vite.config.ts",
+    "e2e",
+    "scripts",
+    ".react-router/types/**/*"
+  ],
+  "exclude": ["node_modules", "build", "public"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "~/*": ["./src/*"] },
+    "rootDirs": [".", "./.react-router/types"],
+    "types": ["@react-router/node", "vite/client"]
+  }
+}

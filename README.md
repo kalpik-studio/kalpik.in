@@ -4,7 +4,6 @@ KALPIK INTERIORS was established in 1993 in Delhi with the aim of undertaking hi
 
 KALPIK INTERIORS is one of the pioneer interior company, in the National Capital Region, specialising in turn-key projects for interiors including renovations. Our long list of clients include 3 and 5 star hotels, restaurants, offices and retails outlets. We offer complete package for interiors including flooring, ceiling, painting, lighting, air conditioning, plumbing and custom-made furniture. Our expertise caters especially to your tastes, personality, lifestyle and budget. We have our registered office in the heart of Delhi including a well-equipped display and works unit. Our ultra modern works unit is spread over an area of 14,500 sq ft and is fitted with most sophisticated plants and machinery. Our main focus is customer satisfaction through speedy execution of projects on a time bound delivery schedule without compromising on quality.
 
-
 ### Contact
 
 314, Ansal Majestic Tower, PVR Complex, Vikas Puri, New Delhi 110018.
@@ -14,4 +13,3 @@ Ph: +91 11 45672128
 [Mail](mailto:info@kalpik.in)
 
 [Linkedin](https://www.linkedin.com/company/kalpik-interiors/)
-

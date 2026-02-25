@@ -1,0 +1,32 @@
+{
+  "name": "@innbell/web-push",
+  "version": "0.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "lint": "oxlint -c ../../packages/config/oxlintrc.json ./src",
+    "lint:fix": "yarn lint --fix --fix-suggestions",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@innbell/components": "workspace:*",
+    "@innbell/constants": "workspace:*",
+    "@innbell/pocketbase": "workspace:*",
+    "@innbell/pwa": "workspace:*",
+    "@innbell/reports": "workspace:*",
+    "@innbell/router": "workspace:*",
+    "@innbell/toasts": "workspace:*",
+    "@innbell/utils": "workspace:*",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "@innbell/config": "workspace:*",
+    "@types/web-push": "^3.6.3"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./api": "./src/push-subs-api.server.ts",
+    "./subscribe": "./src/useSubscribeToPushNotifications.tsx",
+    ".": "./src/web-push.server.ts"
+  }
+}

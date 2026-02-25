@@ -1,0 +1,40 @@
+name: Chromatic
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    paths:
+      - "packages/components/**"
+      - .github/workflows/chromatic.yaml
+
+jobs:
+  publish:
+    name: Publish to Chromatic
+    runs-on: ubuntu-latest
+    environment:
+      name: chromatic
+      url: ${{ steps.artifact-upload-step.run.storybookUrl }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Prebuild
+        run: yarn icon:build
+
+      - name: Run Chromatic
+        id: run
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          configFile: "./packages/components/.storybook/chromatic.json"
