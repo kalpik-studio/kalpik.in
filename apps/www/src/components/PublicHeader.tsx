@@ -26,35 +26,20 @@ export type PublicHeaderProps = {
 };
 
 export function PublicHeader({ banner }: PublicHeaderProps) {
-  const headerRef = useRef<HTMLElement>(null);
-  const viewport = useViewportContext();
-  const windowHeight = useWindowInnerHeight();
-  const isMobile = viewport <= Viewport.SMALL_TABLET;
-
-  const { scrollY } = useScroll();
-  const background = useTransform(
-    scrollY,
-    (value) => `rgba(0, 0, 0, ${Math.min(0.9, value / windowHeight)})`,
-  );
-
   return (
-    <m.header
-      style={{ background }}
+    <header
+      // style={{ background }}
       className={cn(
-        "fixed left-0 right-0 top-0 z-10 backdrop-blur-md",
+        "relative left-0 right-0 top-0 z-10 backdrop-blur-md bg-black",
         "flex items-center justify-between py-2 font-sans text-white backdrop-blur-md px-8",
-        banner && "pt-10",
       )}
-      ref={headerRef}
     >
       {banner ? <Banner theme={"www"}>{banner}</Banner> : null}
 
       <Link to="/" className="lg:h-18 h-16">
         <img src="/images/MarketingLogo.png" alt="InnBell" className="h-full" />
       </Link>
-
-      <nav>{isMobile ? <NavigationMobile /> : <NavigationDesktop />}</nav>
-    </m.header>
+    </header>
   );
 }
 

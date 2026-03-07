@@ -4,14 +4,14 @@ import { WwwRoute } from "@innbell/router/routes";
 import { PublicSection } from "./PublicSection";
 
 const learnMoreAboutUs = [
-  "At InnBell, we are revolutionizing the hospitality industry by bridging the gap between businesses and top-tier service providers. Our platform is engineered to meet the unique demands of both small enterprises and large corporations, ensuring seamless access to the best products and services in hospitality. Whether you're sourcing for a boutique hotel or managing operations for a multi-location restaurant chain, InnBell guarantees that the procurement process is streamlined, efficient, and backed by quality assurance.",
+  "For over two decades, I operated as a principal interior contractor within the Indian hospitality sector, executing complex design briefs for leading 5-star hotel groups. Today, I leverage that hands-on operational background to provide independent project advisory services. My focus is on ensuring design intent translates into functional reality, managing FF&E procurement, and aligning site execution with stringent operator brand standards from schematic design through to final handover.",
 ];
 
 export function LandingAboutUsSection() {
   return (
     <PublicSection
       title="About us"
-      subTitle="Simplifying Hospitality Industry"
+      subTitle="25 Years of Industry Execution"
       className="bg-gradient-to-b from-slate-200 to-transparent"
       footer={
         <ButtonLink to={WwwRoute.ABOUT}>

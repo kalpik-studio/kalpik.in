@@ -1,5 +1,6 @@
 import { genWwwRoute } from "@innbell/router/routes";
-import { FAQ } from "~/components/FAQ";
+import { ContactUsSection } from "~/components/ContactUsSection";
+import { GetStarted } from "~/components/GetStarted";
 import { LandingAboutUsSection } from "~/components/LandingAboutUsSection";
 import { LandingHero } from "~/components/LandingHero";
 import { LandingPartnerSection } from "~/components/LandingPartnerSection";
@@ -10,11 +11,10 @@ import { TeamCard } from "./about";
 
 export const meta: Route.MetaFunction = () => {
   return [
-    { title: "Hospitality Supply Chain Simplified - InnBell" },
+    { title: "Kalpik" },
     {
       name: "description",
-      content:
-        "Streamline your hospitality business with InnBell! Discover a smarter way to procure supplies, manage inventory, and connect with vendors. Join the InnBell community today!",
+      content: "Hospitality Consulting & Project Advisory",
     },
   ];
 };
@@ -48,7 +48,7 @@ export default function Index() {
         <div className="flex w-full flex-col justify-stretch gap-8 px-8 sm:flex-row">
           <TeamCard
             name="Pawan Gupta"
-            role="Co-founder & CEO"
+            role="Proprietor"
             img="/team/PawanGupta.jpg"
           >
             <p>
@@ -69,51 +69,8 @@ export default function Index() {
         </div>
       </PublicSection>
 
-      <FAQ />
+      <GetStarted />
+      <ContactUsSection />
     </>
   );
 }
-
-// const heroProducts: HeroParallaxProduct[] = [
-//   {
-//     // title: "Explore products",
-//     thumbnail: "/screenshots/screenshot-app-explore2-desktop.png",
-//   },
-//   {
-//     // title: "Explore categories",
-//     thumbnail: "/screenshots/screenshot-app-explore-desktop.png",
-//   },
-//   {
-//     // title: "Vendors list",
-//     thumbnail: "/screenshots/screenshot-app-list-desktop.png",
-//   },
-//   {
-//     // title: "Vendor details",
-//     thumbnail: "/screenshots/screenshot-app-vendor-desktop.png",
-//   },
-//   {
-//     // title: "Enquiries",
-//     thumbnail: "/screenshots/screenshot-app-enquiries-desktop.png",
-//   },
-//   // row 2
-//   {
-//     // title: "Explore categories",
-//     thumbnail: "/screenshots/screenshot-app-explore-desktop.png",
-//   },
-//   {
-//     // title: "Explore products",
-//     thumbnail: "/screenshots/screenshot-app-explore2-desktop.png",
-//   },
-//   {
-//     // title: "Vendor details",
-//     thumbnail: "/screenshots/screenshot-app-vendor-desktop.png",
-//   },
-//   {
-//     // title: "Enquiries",
-//     thumbnail: "/screenshots/screenshot-app-enquiries-desktop.png",
-//   },
-//   {
-//     // title: "Vendors list",
-//     thumbnail: "/screenshots/screenshot-app-list-desktop.png",
-//   },
-// ];

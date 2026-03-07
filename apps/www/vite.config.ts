@@ -3,7 +3,6 @@ import { reactRouter } from "@react-router/dev/vite";
 import { visualizer } from "rollup-plugin-visualizer";
 import type { PluginOption } from "vite";
 import { defineConfig } from "vitest/config";
-import { viteManualChunks } from "@innbell/config/vite";
 
 const port = 5001;
 
@@ -21,7 +20,6 @@ const getPlugins = (isBuild: boolean): PluginOption[] => {
 };
 
 export default defineConfig(({ command }) => ({
-  build: { rollupOptions: { output: { manualChunks: viteManualChunks } } },
   plugins: getPlugins(command === "build"),
   resolve: {
     alias: { "~": path.resolve(__dirname, "./src") },

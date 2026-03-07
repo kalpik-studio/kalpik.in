@@ -13,9 +13,7 @@
     "@innbell/constants": "workspace:*",
     "@innbell/contexts": "workspace:*",
     "@innbell/misc": "workspace:*",
-    "@innbell/pocketbase": "workspace:*",
     "@innbell/pwa": "workspace:*",
-    "@innbell/reports": "workspace:*",
     "@innbell/router": "workspace:*",
     "@innbell/toasts": "workspace:*",
     "@innbell/utils": "workspace:*"

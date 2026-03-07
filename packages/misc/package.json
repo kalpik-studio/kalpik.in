@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@innbell/contexts": "workspace:*",
-    "@innbell/reports": "workspace:*",
     "@innbell/router": "workspace:*",
     "@oslojs/crypto": "^1.0.1",
     "@oslojs/encoding": "^1.1.0",

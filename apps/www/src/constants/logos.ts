@@ -51,10 +51,6 @@ export const vendorLogos: PublicLogo[] = [
     src: "/logos/FuntreeHotels.png",
     alt: "Funtree Hotels and Consultancy",
   },
-  {
-    src: "/logos/Kalpik.jpg",
-    alt: "Kalpik Interiors",
-  },
 ];
 
 export const allLogos: PublicLogo[] = [...buyerLogos, ...vendorLogos].slice(

@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "icon": "yarn icon:build; yarn icon:copy",
     "icon:lucide": "yarn workspace @innbell/icons download lucide",
     "icon:simple": "yarn workspace @innbell/icons download simple",
     "icon:build": "yarn workspace @innbell/icons build",

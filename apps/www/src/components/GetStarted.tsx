@@ -1,6 +1,6 @@
 import { Icon, IconName } from "@innbell/components/Icon.tsx";
 import { Link } from "@innbell/router";
-import { genAppRoute, WwwRoute } from "@innbell/router/routes";
+import { WwwRoute } from "@innbell/router/routes";
 import { cn } from "@innbell/utils/cn";
 import { PublicSection } from "./PublicSection";
 
@@ -9,36 +9,33 @@ export function GetStarted() {
     <PublicSection
       id="get-started"
       className="bg-slate-100 bg-repeat pt-40"
-      title="Get started with InnBell"
-      subTitle="Become a registered Buyer or Vendor and begin networking"
+      title="Project Consultancy Focus Areas"
+      // subTitle="Become a registered Buyer or Vendor and begin networking"
       style={{ backgroundImage: `url(/images/hero_bg.jpg)` }}
     >
       <div className="flex flex-col items-stretch justify-between gap-12 md:flex-row ">
         <InfoCard
-          accountType="Buyer"
-          learnMoreLink={WwwRoute.BUYER}
-          registerLink={`${genAppRoute((Route) => Route.REGISTER_ACCOUNT)}?type=buyer`}
+          accountType="Hospitality Developments"
+          subtitle="Advisory services for greenfield hotel projects, conversions, and property refurbishments."
+          learnMoreText="Discuss Your Hospitality Projects"
+          learnMoreLink={"#contact"}
           benefits={[
-            { title: "Simplified Supplier Discovery", icon: IconName.SEARCH },
-            { title: "Time-Efficient Sourcing", icon: IconName.CLOCK_5 },
-            { title: "Quality Assurance", icon: IconName.STAR },
-            { title: "Budget Optimization", icon: IconName.COINS },
-            { title: "Seamless Procurement", icon: IconName.WAVES },
+            { title: "Operator Standard Compliance" },
+            { title: "FF&E Sourcing" },
+            { title: "Site Audits" },
+            { title: "Defect Management" },
           ]}
         />
         <InfoCard
-          accountType="Vendor"
-          learnMoreLink={WwwRoute.VENDOR}
-          registerLink={`${genAppRoute((Route) => Route.REGISTER_ACCOUNT)}?type=vendor`}
+          accountType="Commercial F&B & Corporate Spaces"
+          subtitle="Execution strategy for high-traffic dining venues and premium corporate interiors."
+          learnMoreText="Discuss Your Commercial Projects"
+          learnMoreLink={"#contact"}
           benefits={[
-            { title: "Reach a Wider Audience", icon: IconName.USERS },
-            {
-              title: "Increase Sales Opportunities",
-              icon: IconName.COINS,
-            },
-            { title: "Enhanced Visibility", icon: IconName.EYE },
-            { title: "Reliable Partnerships", icon: IconName.HANDSHAKE },
-            { title: "Marketing Support", icon: IconName.MEGAPHONE },
+            { title: "Spatial Flow Optimization" },
+            { title: "Vendor Management" },
+            { title: "Turnkey Advisory" },
+            { title: "Material Selection" },
           ]}
         />
       </div>
@@ -48,19 +45,20 @@ export function GetStarted() {
 
 function InfoCard({
   accountType,
+  learnMoreText = "Learn more",
   learnMoreLink,
-  registerLink,
   benefits,
+  subtitle,
 }: {
   accountType: string;
+  learnMoreText?: string;
   learnMoreLink: string;
-  registerLink: string;
   benefits: { title: string; icon?: IconName }[];
+  subtitle: string;
 }) {
   return (
     <article className="flex min-w-64 max-w-96 flex-col rounded-lg bg-white text-accent-accent1 shadow-lg hover:shadow-2xl">
-      <header className="px-10 py-8">
-        <p className="font-bold">InnBell</p>
+      <header className="px-10 py-8 flex-1">
         <Link
           to={learnMoreLink}
           tabIndex={-1}
@@ -71,9 +69,7 @@ function InfoCard({
       </header>
 
       <main className="flex-1 px-10 pb-8">
-        <p className="text-sm opacity-80">
-          Benefits of joining us as a {accountType}:
-        </p>
+        <p className="text-sm opacity-80">{subtitle}</p>
         <ul className="text-left text-lg">
           {benefits.map(({ icon, title }) => (
             <li
@@ -99,15 +95,7 @@ function InfoCard({
           className="flex justify-center border-t border-accent-accent2 bg-accent-accent2/10 px-6 py-4 hover:bg-accent-accent3 hover:text-white"
           aria-label={`Learn more about ${accountType}`}
         >
-          Learn more
-        </Link>
-        <Link
-          reloadDocument
-          to={registerLink}
-          className="flex flex-1 justify-center gap-1 rounded-b-lg border-t border-accent-accent2 bg-accent-accent2 px-6 py-4 font-medium hover:bg-accent-accent3 hover:text-white"
-        >
-          <span>Register as</span>
-          <span className="font-bold">{accountType}</span>
+          {learnMoreText}
         </Link>
       </footer>
     </article>

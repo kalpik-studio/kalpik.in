@@ -2,26 +2,26 @@ import { PublicSection } from "./PublicSection";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 const keyReasons = {
-  "Streamlined Procurement":
-    "InnBell simplifies the sourcing and procurement process by providing the buyers and vendors with a single platform, saving time and effort.",
-  "Cost Efficiency":
-    "InnBell reduces operational costs for buyers by connecting them with trusted and competitive vendors.",
-  "Wide Network":
-    "Buyers and vendors get access to a broad range of businesses, opening more options to sell or buy products from.",
-  "Quality Assurance":
-    " All vendors are verified before adding to the InnBell vendors list, assuring quality products and trustworthy partners",
-  "Tailored Solutions":
-    " InnBell provides specific solutions especially designed for the hospitality industry, making it India's first platform to do so.",
-  "Business Growth":
-    " InnBell helps vendors to visiblize their products to a bigger marketplace. It helps them reach more buyers to grow their business.",
+  "Project Co-ordination & Oversight":
+    "Aligning architectural teams, MEP (Mechanical, Electrical, Plumbing) consultants, and on-site contractors to maintain project timelines and design integrity.",
+  "FF&E OS&E Procurement":
+    "Strategic sourcing of Furniture, Fixtures, & Equipment, leveraging an established international vendor network for optimal commercial terms.",
+  "Value Engineering":
+    "Analyzing BOQs (Bill of Quantities) and specifications to identify cost-saving alternatives without compromising brand compliance or operational durability.",
+  "Pre=Opening & Handover":
+    "Managing the final stages of the project lifecycle, including comprehensive snagging, defect resolution, and operational handover readiness.",
+  "Brand Standard Compliance":
+    "Conducting rigorous site audits to ensure all finishes, materials, and spatial flows meet the exact specifications of international hotel operators.",
+  "Turnkey Execution Advisory":
+    "Providing end-to-end guidance for commercial F&B and corporate spaces, from initial layout planning to contractor management.",
 };
 
 export function LandingPartnerSection() {
   return (
     <PublicSection
-      title="Why Partner with InnBell?"
+      title="Core Advisory Competencies"
       subTitle={
-        "Discover the benefits of partnering with InnBell. From our extensive network to our commitment to quality, we offer solutions tailored to your unique needs, ensuring seamless integration and cost efficiency."
+        "Strategic guidance and technical oversight for hospitality developments and commercial interiors."
       }
       className="bg-gradient-to-b from-accent-accent3/10 to-transparent"
     >

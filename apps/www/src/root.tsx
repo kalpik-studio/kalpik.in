@@ -38,12 +38,12 @@ export async function loader({ request }: Route.LoaderArgs) {
   const gtmTrackingId =
     env.NODE_ENV === "production" &&
     new URL(request.url).host.includes("kalpik.in")
-      ? "GTM-NGZJNWB7"
+      ? ""
       : undefined;
   const linkedinPartnerId =
     env.NODE_ENV === "production" &&
     new URL(request.url).host.includes("kalpik.in")
-      ? "6842668"
+      ? ""
       : undefined;
 
   const banner: string = "";
@@ -63,13 +63,13 @@ export async function loader({ request }: Route.LoaderArgs) {
 }
 
 export default function App({ loaderData }: Route.ComponentProps) {
-  const { banner, csrfToken, isMobile } = loaderData;
+  const { csrfToken, isMobile } = loaderData;
 
   return (
     <AuthenticityTokenProvider token={csrfToken}>
       <ViewportProvider isMobile={isMobile}>
         <LazyMotion features={domAnimation} strict>
-          <PublicHeader banner={banner} />
+          {/* <PublicHeader banner={banner} /> */}
           <Outlet />
           <PublicFooter />
         </LazyMotion>
@@ -82,50 +82,13 @@ const ldJsonList = [
   {
     "@context": "https://schema.org/",
     "@type": "WebSite",
-    name: "Innbell",
-    url: "https://innbell.com/",
+    name: "Kalpik",
+    url: "https://kalpik.in/",
     potentialAction: {
       "@type": "SearchAction",
       target: "{search_term_string}",
       "query-input": "required name=search_term_string",
     },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "InnBell",
-    url: "https://innbell.com/",
-    logo: "https://innbell.com/images/MarketingLogo.png",
-    sameAs: [
-      "https://linkedin.com/company/innbell",
-      "https://www.facebook.com/people/InnBell/61556671424730/",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "InnBell",
-    image: "https://innbell.com/images/MarketingLogo.png",
-    "@id": "",
-    url: "https://innbell.com/",
-    telephone: "1145672128",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "314 Ansal Majestic Tower, Vikaspuri",
-      addressLocality: "Delhi",
-      postalCode: "110018",
-      addressCountry: "IN",
-    },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Wednesday", "Monday", "Tuesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "17:00",
-    },
-    sameAs: [
-      "https://linkedin.com/company/innbell",
-      "https://www.facebook.com/people/InnBell/61556671424730/",
-    ],
   },
 ];
 
@@ -141,7 +104,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="application-name" content="InnBell" />
+        <meta name="application-name" content="Kalpik" />
         <meta name="viewport" content={viewportContent} />
         <meta
           name="theme-color"
@@ -153,13 +116,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
           content={"#000000"}
           media="(prefers-color-scheme: dark)"
         />
-        <meta name="short-name" content="InnBell" />
+        <meta name="short-name" content="Kalpik" />
+        <meta name="apple-mobile-web-app-title" content="Kalpik" />
         <CSPMetaTag />
 
         <Meta />
         <Links />
 
-        <title>InnBell</title>
+        <title>Kalpik</title>
         {ldJsonList.map((ldJson, index) => (
           <script
             type="application/ld+json"
@@ -199,18 +163,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export const links: Route.LinksFunction = () => {
   return [
     // Favicons
-    { rel: "shortcut icon", href: "/favicon.ico" },
-    { rel: "icon", type: "image/svg+xml", href: "/favicons/favicon.svg" },
+    { rel: "shortcut icon", href: "/favicon/favicon.ico" },
+    { rel: "icon", type: "image/svg+xml", href: "/favicon/favicon.svg" },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/favicon/favicon-96x96.png",
+      sizes: "96x96",
+    },
     {
       rel: "apple-touch-icon",
+      type: "image/png",
+      href: "/favicon/apple-touch-icon.png",
       sizes: "180x180",
-      href: "/favicons/apple-touch-icon.png",
     },
-    {
-      rel: "mask-icon",
-      href: "/favicons/safari-pinned-tab.svg",
-      color: "#7e2a00",
-    },
+    { rel: "manifest", href: "/favicon/site.webmanifest" },
     { rel: "preconnect", href: "https://fonts.googleapis.com" },
     {
       rel: "preconnect",

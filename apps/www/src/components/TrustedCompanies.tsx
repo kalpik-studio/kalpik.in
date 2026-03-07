@@ -4,8 +4,8 @@ import { PublicSection } from "./PublicSection";
 
 export function TrustedCompanies({
   logos = allLogos,
-  title = "Trusted Buyers and Vendors",
-  subtitle = "We have on-boarded renowned and trusted companies for you",
+  title = "Brand Experience & Collaborations",
+  subtitle = "A portfolio of hospitality groups, operators, and commercial brands I have partnered with throughout my contracting career.",
 }: {
   logos?: Array<PublicLogo>;
   title?: string;

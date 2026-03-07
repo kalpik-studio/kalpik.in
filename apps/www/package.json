@@ -15,18 +15,12 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@innbell/blog": "workspace:*",
     "@innbell/components": "workspace:*",
     "@innbell/constants": "workspace:*",
     "@innbell/contexts": "workspace:*",
-    "@innbell/editor": "workspace:*",
-    "@innbell/emails": "workspace:*",
-    "@innbell/leads": "workspace:*",
-    "@innbell/reports": "workspace:*",
     "@innbell/root": "workspace:*",
     "@innbell/router": "workspace:*",
     "@innbell/toasts": "workspace:*",
-    "@innbell/turnstile": "workspace:*",
     "@innbell/utils": "workspace:*",
     "@react-router/serve": "*",
     "react": "*",

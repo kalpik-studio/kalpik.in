@@ -68,7 +68,7 @@ function getIconEnumNameFromId(id: string) {
 }
 
 async function generateSymbolFromFile(file: Dirent) {
-  const filePath = path.join(file.path, file.name);
+  const filePath = path.join(file.parentPath, file.name);
   const id = file.name.replace(".svg", "");
   const contents = await fs.readFile(filePath, { encoding: "utf8" });
   const symbol = contents
