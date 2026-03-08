@@ -6,9 +6,9 @@ import path from "node:path";
 const arg = process.argv[2];
 const shouldForceBuild = arg ? ["-f", "--force"].includes(arg) : false;
 
-const svgIconsDirPath = path.resolve("svg");
 const srcDir = path.resolve("src");
-const iconsConstantPath = path.join(srcDir, "icons.ts");
+const svgIconsDirPath = path.resolve(srcDir, "icons", "svg");
+const iconsConstantPath = path.join(srcDir, "icons", "icons.ts");
 
 const allFiles = await fs.readdir(svgIconsDirPath, { withFileTypes: true });
 const svgFiles = allFiles.filter((entry) => entry.isFile());
@@ -16,7 +16,7 @@ const ids = svgFiles.map((file) => file.name.replace(".svg", ""));
 const symbols = await Promise.all(svgFiles.map(generateSymbolFromFile));
 
 const filename = `sprite-${createHash()}.svg`;
-const outDir = path.resolve("build");
+const outDir = path.resolve("public");
 const filePath = path.join(outDir, filename);
 
 try {
@@ -32,9 +32,18 @@ try {
 
   // Remove old sprites
   if (existsSync(outDir)) {
-    await fs.rm(outDir, { recursive: true, force: true });
+    const existingSprites = await fs
+      .readdir(outDir, { withFileTypes: true })
+      .then((list) =>
+        list.filter((e) => e.isFile() && e.name.startsWith("sprite-")),
+      );
+
+    await Promise.allSettled(
+      existingSprites.map((file) =>
+        fs.rm(path.join(file.parentPath, file.name)),
+      ),
+    );
   }
-  await fs.mkdir(outDir, { recursive: true });
 }
 
 await fs.writeFile(
