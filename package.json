@@ -12,7 +12,7 @@
     "icon:lucide": "node --experimental-strip-types ./scripts/download-icons.ts lucide",
     "icon:simple": "node --experimental-strip-types ./scripts/download-icons.ts simple",
     "routes": "node  --experimental-strip-types ./scripts/gen-routes-path.ts",
-    "build": "react-router build",
+    "build": "yarn icon; react-router build",
     "dev": "react-router dev",
     "typecheck": "react-router typegen && tsc",
     "format": "prettier --write ./src",
