@@ -1,11 +1,11 @@
 /* eslint-disable no-unescaped-entities */
 
-import { RichText } from "@innbell/components/RichText.tsx";
-import { genWwwRoute } from "@innbell/router/routes";
-import { cn } from "@innbell/utils/cn";
+import { genWwwRoute } from "react-router/routes";
 import { MissionHero } from "~/components/MissionHero";
 import { PublicSection } from "~/components/PublicSection";
 import { RegisterCTA } from "~/components/RegisterCTA";
+import { RichText } from "~/components/RichText.tsx";
+import { cn } from "~/utils/cn";
 import type { Route } from "./+types/about";
 
 export const meta: Route.MetaFunction = () => {

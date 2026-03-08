@@ -1,7 +1,7 @@
 import { m, useScroll, useTransform, type MotionValue } from "framer-motion";
 import React from "react";
-import { genAppRoute } from "@innbell/router/routes";
-import { cn } from "@innbell/utils/cn";
+import { genAppRoute } from "react-router/routes";
+import { cn } from "~/utils/cn";
 import { MovingBorderButton } from "./moving-border";
 
 export const ContainerScroll = ({

@@ -1,12 +1,12 @@
+import { useFetcher } from "react-router";
+import { WwwRoute } from "react-router/routes";
 import { AuthenticityTokenInput } from "remix-utils/csrf/react";
-import { Button, ButtonLink } from "@innbell/components/Button.tsx";
-import { ErrorMessage } from "@innbell/components/ErrorMessage.tsx";
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { Select, type SelectOption } from "@innbell/components/Select.tsx";
-import { TextArea } from "@innbell/components/TextArea.tsx";
-import { TextField } from "@innbell/components/TextField.tsx";
-import { useFetcher } from "@innbell/router";
-import { WwwRoute } from "@innbell/router/routes";
+import { Button, ButtonLink } from "~/components/Button.tsx";
+import { ErrorMessage } from "~/components/ErrorMessage.tsx";
+import { Icon, IconName } from "~/components/Icon.tsx";
+import { Select, type SelectOption } from "~/components/Select.tsx";
+import { TextArea } from "~/components/TextArea.tsx";
+import { TextField } from "~/components/TextField.tsx";
 import { PublicSection } from "./PublicSection";
 
 const reasonOptions: SelectOption[] = [

@@ -1,5 +1,5 @@
-import { cn } from "@innbell/utils/cn";
 import { allLogos, type PublicLogo } from "~/constants/logos";
+import { cn } from "~/utils/cn";
 import { PublicSection } from "./PublicSection";
 
 export function TrustedCompanies({

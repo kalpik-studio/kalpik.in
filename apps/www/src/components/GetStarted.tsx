@@ -1,7 +1,7 @@
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { Link } from "@innbell/router";
-import { WwwRoute } from "@innbell/router/routes";
-import { cn } from "@innbell/utils/cn";
+import { Link } from "react-router";
+import { WwwRoute } from "react-router/routes";
+import { Icon, IconName } from "~/components/Icon.tsx";
+import { cn } from "~/utils/cn";
 import { PublicSection } from "./PublicSection";
 
 export function GetStarted() {

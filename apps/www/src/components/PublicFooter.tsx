@@ -1,6 +1,6 @@
-import { ButtonLink } from "@innbell/components/Button.tsx";
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { Link } from "@innbell/router";
+import { Link } from "react-router";
+import { ButtonLink } from "~/components/Button.tsx";
+import { Icon, IconName } from "~/components/Icon.tsx";
 
 export function PublicFooter() {
   return (

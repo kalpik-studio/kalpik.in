@@ -1,12 +1,6 @@
 import "./tailwind.css";
 
 import { domAnimation, LazyMotion } from "framer-motion";
-import { AuthenticityTokenProvider } from "remix-utils/csrf/react";
-import env, { clientEnv } from "@innbell/constants/env";
-import { useNonceContext } from "@innbell/contexts/nonce";
-import { ViewportProvider } from "@innbell/contexts/viewport";
-import { CSPMetaTag } from "@innbell/misc/csp";
-import { commitCsrfToken } from "@innbell/misc/csrf";
 import {
   data,
   Links,
@@ -15,16 +9,21 @@ import {
   Scripts,
   ScrollRestoration,
   useRouteLoaderData,
-} from "@innbell/router";
-import { cn } from "@innbell/utils/cn";
-import { checkIsMobileDeviceByRequest } from "@innbell/utils/user-agent";
+} from "react-router";
+import { AuthenticityTokenProvider } from "remix-utils/csrf/react";
+import env, { clientEnv } from "~/constants/env.server";
+import { useNonceContext } from "~/contexts/nonce-context";
+import { ViewportProvider } from "~/contexts/viewport-context";
+import { CSPMetaTag } from "~/misc/csp";
+import { commitCsrfToken } from "~/misc/csrf";
+import { cn } from "~/utils/cn";
+import { checkIsMobileDeviceByRequest } from "~/utils/user-agent.server";
 import type { Route } from "./+types/root";
 import { GTM } from "./components/GTM";
 import { LinkedInInsight } from "./components/LinkedInInsight";
 import { PublicFooter } from "./components/PublicFooter";
-import { PublicHeader } from "./components/PublicHeader";
 
-export { ErrorBoundary } from "@innbell/root";
+export { RootErrorBoundary as ErrorBoundary } from "./root-error-boundary";
 
 export async function loader({ request }: Route.LoaderArgs) {
   const isMobile = checkIsMobileDeviceByRequest(request);

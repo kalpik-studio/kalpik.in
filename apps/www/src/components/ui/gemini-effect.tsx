@@ -1,7 +1,7 @@
 import React from "react";
-import { ButtonLink } from "@innbell/components/Button.tsx";
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { cn } from "@innbell/utils/cn";
+import { ButtonLink } from "~/components/Button.tsx";
+import { Icon, IconName } from "~/components/Icon.tsx";
+import { cn } from "~/utils/cn";
 
 // const colors = ["#FFB7C5", "#FFDDB7", "#B1C5FF", "#4FABFF", "#076EFF"] as const;
 const colors = ["#FFB7C5", "#B1C5FF", "#00E5E5", "#4FABFF", "#0F9494"] as const;

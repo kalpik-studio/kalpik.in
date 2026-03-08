@@ -1,7 +1,7 @@
-import { Icon, type IconName } from "@innbell/components/Icon.tsx";
-import { Link } from "@innbell/router";
-import type { LinkTo } from "@innbell/router/types";
-import { cn } from "@innbell/utils/cn";
+import { Link } from "react-router";
+import type { LinkTo } from "react-router/types";
+import { Icon, type IconName } from "~/components/Icon.tsx";
+import { cn } from "~/utils/cn";
 
 export const BentoGrid = ({
   className,

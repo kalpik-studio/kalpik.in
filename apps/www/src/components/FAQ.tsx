@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@innbell/components/ui/accordion.tsx";
-import { cn } from "@innbell/utils/cn";
+} from "~/components/ui/accordion.tsx";
+import { cn } from "~/utils/cn";
 
 const faqs: { q: string; a: string }[] = [
   {

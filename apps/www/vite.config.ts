@@ -4,8 +4,6 @@ import { visualizer } from "rollup-plugin-visualizer";
 import type { PluginOption } from "vite";
 import { defineConfig } from "vitest/config";
 
-const port = 5001;
-
 const getPlugins = (isBuild: boolean): PluginOption[] => {
   const isStorybook = process.argv[1]?.includes("storybook");
   const { VITEST, E2E, CI } = process.env;
@@ -24,7 +22,6 @@ export default defineConfig(({ command }) => ({
   resolve: {
     alias: { "~": path.resolve(__dirname, "./src") },
   },
-  server: { port },
   test: {
     setupFiles: ["dotenv/config"],
     exclude: [

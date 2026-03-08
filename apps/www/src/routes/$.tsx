@@ -1,8 +1,8 @@
-import { ButtonLink } from "@innbell/components/Button.tsx";
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { handleRedirects } from "@innbell/router/redirects";
-import { genWwwRoute } from "@innbell/router/routes";
-import { createMetaFunction } from "@innbell/router/utils";
+import { handleRedirects } from "react-router/redirects";
+import { genWwwRoute } from "react-router/routes";
+import { createMetaFunction } from "react-router/utils";
+import { ButtonLink } from "~/components/Button.tsx";
+import { Icon, IconName } from "~/components/Icon.tsx";
 import type { Route } from "./+types/$";
 
 export const meta = createMetaFunction("Error");

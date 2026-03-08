@@ -1,6 +1,6 @@
-import { ButtonLink } from "@innbell/components/Button.tsx";
-import { Icon, IconName } from "@innbell/components/Icon.tsx";
-import { WwwRoute } from "@innbell/router/routes";
+import { WwwRoute } from "react-router/routes";
+import { ButtonLink } from "~/components/Button.tsx";
+import { Icon, IconName } from "~/components/Icon.tsx";
 import { PublicSection } from "./PublicSection";
 
 const learnMoreAboutUs = [

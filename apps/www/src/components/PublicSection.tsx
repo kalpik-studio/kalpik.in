@@ -1,4 +1,4 @@
-import { cn } from "@innbell/utils/cn";
+import { cn } from "~/utils/cn";
 
 export type PublicSectionProps = {
   id?: string;

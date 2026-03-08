@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNonceContext } from "@innbell/contexts/nonce";
+import { useNonceContext } from "~/contexts/nonce-context";
 
 export function LinkedInInsight({
   linkedinPartnerId,

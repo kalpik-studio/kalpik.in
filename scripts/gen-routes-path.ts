@@ -4,8 +4,8 @@ import path from "node:path";
 const rootDirPath = import.meta.resolve("..").replace("file:", "");
 const routesFilePath = path.join(
   rootDirPath,
-  "packages",
-  "router",
+  "apps",
+  "www",
   "src",
   "routes.ts",
 );
@@ -64,8 +64,7 @@ fs.writeFileSync(routesFilePath, fileContents.join("\n"), "utf8");
 
 // Helpers
 
-/** @param {string} path */
-function generateNameFromPath(path, starts) {
+function generateNameFromPath(path: string, starts: string) {
   if (path === starts) return "ROOT";
   return path
     .replace(starts === "/" ? "/" : starts + "/", "")
@@ -73,7 +72,6 @@ function generateNameFromPath(path, starts) {
     .toUpperCase();
 }
 
-/** @param {string} str */
-function toTitleCase(str) {
+function toTitleCase(str: string) {
   return str[0].toUpperCase() + str.slice(1);
 }

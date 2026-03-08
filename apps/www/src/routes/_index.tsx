@@ -1,4 +1,4 @@
-import { genWwwRoute } from "@innbell/router/routes";
+import { genWwwRoute } from "react-router/routes";
 import { ContactUsSection } from "~/components/ContactUsSection";
 import { GetStarted } from "~/components/GetStarted";
 import { LandingAboutUsSection } from "~/components/LandingAboutUsSection";

@@ -1,6 +1,6 @@
-import { cn } from "@innbell/utils/cn";
 import { m } from "framer-motion";
 import React from "react";
+import { cn } from "~/utils/cn";
 
 export const LampContainer = ({
   children,

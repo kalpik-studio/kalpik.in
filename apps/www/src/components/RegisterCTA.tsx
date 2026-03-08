@@ -1,5 +1,5 @@
-import { genAppRoute } from "@innbell/router/routes";
-import { cn } from "@innbell/utils/cn";
+import { genAppRoute } from "react-router/routes";
+import { cn } from "~/utils/cn";
 import { MovingBorderButton } from "./ui/moving-border";
 
 export function RegisterCTA({

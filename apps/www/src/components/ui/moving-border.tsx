@@ -1,4 +1,3 @@
-import { cn } from "@innbell/utils/cn";
 import {
   m,
   useAnimationFrame,
@@ -7,6 +6,7 @@ import {
   useTransform,
 } from "framer-motion";
 import React from "react";
+import { cn } from "~/utils/cn";
 
 export function MovingBorderButton({
   borderRadius = "1.75rem",

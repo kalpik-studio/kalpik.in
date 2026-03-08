@@ -1,10 +1,10 @@
 import { PassThrough } from "node:stream";
 import { renderToPipeableStream } from "react-dom/server";
-import { NonceProvider } from "@innbell/contexts/nonce";
-import { ServerRouter } from "@innbell/router";
-import type { AppLoadContext, EntryContext } from "@innbell/router";
-import { createReadableStreamFromReadable, isbot } from "@innbell/router/node";
-import { createNonce } from "@innbell/utils/crypto";
+import { ServerRouter } from "react-router";
+import type { AppLoadContext, EntryContext } from "react-router";
+import { createReadableStreamFromReadable, isbot } from "react-router/node";
+import { NonceProvider } from "~/contexts/nonce-context";
+import { createNonce } from "~/utils/crypto.server";
 
 export const streamTimeout = 5000;
 const ABORT_DELAY = 10_000;

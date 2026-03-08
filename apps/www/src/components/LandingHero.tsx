@@ -1,6 +1,6 @@
 import { m } from "framer-motion";
 import { Link } from "react-router";
-import { ButtonLink } from "@innbell/components/Button.tsx";
+import { ButtonLink } from "~/components/Button.tsx";
 import { LampContainer } from "./ui/lamp";
 
 export function LandingHero() {
